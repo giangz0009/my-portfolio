@@ -1,0 +1,28 @@
+.themeItem {
+  --btn-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding-block: 8px;
+  cursor: pointer;
+  span {
+    display: block;
+    text-indent: -100000px;
+    background-color: var(--theme-color);
+    width: var(--btn-size);
+    height: var(--btn-size);
+    border-radius: 50%;
+    transition: 0.3s;
+  }
+  &:hover {
+    span {
+      transform: scale(1.2);
+    }
+  }
+}
+.active {
+  span {
+    transform: scale(1.4);
+  }
+}

@@ -1,0 +1,48 @@
+.projectItem {
+  .projectItemImg {
+    position: relative;
+    img {
+      transition: 0.3s;
+    }
+    .projectItemLink {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        opacity: 0;
+        background-color: rgba(var(--theme-bg-main-rgb), 0.6);
+        border-radius: 0;
+        transition: 0.3s;
+        svg {
+          transform: rotate(45deg);
+          fill: var(--theme-status-text-bolder);
+          width: 40px;
+          height: 40px;
+          font-weight: 700;
+        }
+      }
+    }
+    &:hover {
+      & .projectItemLink {
+        a {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &:hover {
+    .projectItemImg {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+  .projectItemContent {
+  }
+}

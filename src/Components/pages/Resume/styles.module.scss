@@ -1,0 +1,22 @@
+.resumeItem {
+  --pointSize: 12px;
+  padding: 0 32px;
+  border: 1px solid transparent;
+  position: relative;
+  border-left-color: var(--theme-bg-main);
+  &::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    width: var(--pointSize);
+    height: var(--pointSize);
+    border-radius: 50%;
+    background-color: var(--theme-bg-main);
+  }
+  & .resumeItemWrap {
+    padding-bottom: 32px;
+  }
+}
