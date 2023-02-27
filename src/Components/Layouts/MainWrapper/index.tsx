@@ -24,26 +24,37 @@ const MainWrapper = () => {
     [isOpenMenuMobile]
   );
 
-  const handleChangeRoute = React.useCallback(
-    (href: string) => (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-      e.preventDefault();
-      setRouteHref(href);
-    },
-    [routeHref]
-  );
+  let timeOut1;
+  let timeOut2;
 
-  React.useEffect(() => {
-    if (!Boolean(routeHref)) return;
+  const handleTimeOut = (href: string) => {
+    clearTimeout(timeOut1);
+    clearTimeout(timeOut2);
 
-    setTimeout(() => {
-      navigate(routeHref);
+    timeOut1 = setTimeout(() => {
+      navigate(href);
       if (isMobileScreen) setIsOpenMenuMobile(false);
     }, 1000);
 
-    setTimeout(() => {
+    timeOut2 = setTimeout(() => {
       setRouteHref("");
     }, 2000);
-  }, [routeHref]);
+  };
+
+  const handleChangeRoute =
+    (href: string) => (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+      e.preventDefault();
+
+      setRouteHref(href);
+
+      handleTimeOut(href);
+    };
+
+  // React.useEffect(() => {
+  //   if (!Boolean(routeHref)) return;
+
+  //   handleTimeOut();
+  // }, [routeHref]);
 
   const { Wrapper, SideBar, Content } = MainLayout;
 

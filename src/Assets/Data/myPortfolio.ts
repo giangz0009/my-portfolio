@@ -174,11 +174,11 @@ const myPortfolio: MyPortfolioType = {
         "js",
         "ts",
         "reactJs",
-        "redux",
       ],
       mainTechs: ["tailwind", "reactJs", "redux", "ts"],
       date: "15/02/2023 - 27/02/2023",
       img: portfolio,
+      linkDemo: "https://giangdev.vercel.app/#/home",
     },
     {
       name: "Fiverr App",
