@@ -4,10 +4,8 @@ import ReactTypingEffect from "react-typing-effect";
 import img from "Assets/images/portfolio-img/avatar-without-background.png";
 import myPortfolio from "Assets/Data/myPortfolio";
 import MainLayout from "Components/Layouts/MainLayout";
-import { Box, Button } from "@mui/material";
+import { Box } from "@mui/material";
 
-import cv from "Assets/images/cv/cv.pdf";
-import { Animated } from "react-animated-css";
 import ThemeText from "Components/Atoms/ThemeText";
 import MainButton from "Components/Atoms/MainButton";
 
@@ -46,7 +44,7 @@ const Home = () => {
               <div className="flex flex-col justify-center h-full overflow-hidden">
                 {introduceTxt}
                 <Box className="flex mt-6">
-                  <MainButton href={cv}>View My CV</MainButton>
+                  <MainButton href={myPortfolio.cv}>View My CV</MainButton>
                 </Box>
               </div>
             </Grid>

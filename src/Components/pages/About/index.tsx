@@ -1,4 +1,3 @@
-import { Button } from "@mui/material";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Unstable_Grid2";
 import myPortfolio, { Hobby } from "Assets/Data/myPortfolio";
@@ -10,7 +9,6 @@ import GoogleIcon from "@mui/icons-material/Google";
 import MainLayout from "Components/Layouts/MainLayout";
 import React from "react";
 
-import cv from "Assets/images/cv/cv.pdf";
 import ThemeText from "Components/Atoms/ThemeText";
 import Icon from "Components/Atoms/Icon";
 import MainButton from "Components/Atoms/MainButton";
@@ -79,7 +77,7 @@ const About = () => {
                 />
               </p>
               <Box className="flex gap-4 mt-8">
-                <MainButton href={cv} isPrimary={false}>
+                <MainButton href={myPortfolio.cv} isPrimary={false}>
                   <DownloadIcon />
                   <span className="pl-2">Download My CV</span>
                 </MainButton>

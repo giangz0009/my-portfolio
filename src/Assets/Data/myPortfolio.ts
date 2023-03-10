@@ -84,6 +84,7 @@ interface MyPortfolioType {
   professionalSkills: string[];
   projects: Project[];
   contacts: Contacts;
+  cv: string;
 }
 
 const myPortfolio: MyPortfolioType = {
@@ -234,6 +235,7 @@ const myPortfolio: MyPortfolioType = {
       },
     },
   },
+  cv: "https://drive.google.com/file/d/1A6bp2gm-UcEWkI2btPUmWJ9HvgRJ_wJ9/view?usp=share_link",
 };
 
 export default myPortfolio;
